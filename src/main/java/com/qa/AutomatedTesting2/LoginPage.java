@@ -9,7 +9,7 @@ public class LoginPage {
 	@FindBy(xpath = "/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/p/input")
 	WebElement enterPassword;
 	@FindBy(xpath = "/html/body/table/tbody/tr/td[1]/big/blockquote/blockquote/font/center/b")
-	WebElement verification;
+	private WebElement verification;
 	
 	
 	public void checkdetails(String a, String b) {
@@ -17,10 +17,12 @@ public class LoginPage {
 		enterPassword.sendKeys(b);
 		enterPassword.submit();
 	}
-		
-		
-public String result() {
-	return verification.getText();
-}
+
+
+	public String getVerification() {
+		return verification.getText();
+	}
+	
+
 
 }

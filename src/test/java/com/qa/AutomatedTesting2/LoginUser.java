@@ -29,7 +29,7 @@ public class LoginUser {
 		LoginPage login = PageFactory.initElements(driver, LoginPage.class);
 		login.checkdetails("","");
 		Thread.sleep(5000);
-		assertEquals("**Successful Login**", login.result());
+		assertEquals("**Successful Login**", login.getVerification());
 	
 
 }
